@@ -94,3 +94,12 @@ this, target 순서인데 어렵기 때문에 마지막으로 순서 변경
           따라서 이러한 표현식은 최대한 프록시 적용 대상을 축소하는 표현식과 함께 사용해야 한다.
 
 
+** @annotation
+@annotation : 메서드가 주어진 애노테이션을 가지고 있는 조인 포인트를 매칭
+    ex) @annotation(hello.aop.member.annotation.MethodAop)
+
+** @args
+@args: 전달된 실제 인수의 런타임 타입이 주어진 타입의 애노테이션을 갖는 조인 포인트
+- 설명: 전달된 인수의 런타임 타입에 @Check 애노테이션이 있는 경우에 매칭한다.
+       ex) args(~.Check) => @Check 애노테이션이 있는 인수에 경우에 매칭한다.
+잘 쓰진 않아서 설명만 하고 넘어감.
