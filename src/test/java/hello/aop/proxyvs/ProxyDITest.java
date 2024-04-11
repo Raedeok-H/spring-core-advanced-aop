@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Import;
 //@SpringBootTest(properties = {"spring.aop.proxy-target-class=false"}) //JDK 동적 프록시를 우선 사용하기 위한 세팅(여기서 설정하면 테스트마다 다르게 할 수 있다.)
                                                                         //인터페이스가 없으면 CGLIB를 사용한다.
                                                                         //  ->없으면 사용한다는 것이지, 인터페이스가 있는데 구체클래스를 주입받으려하면 안된다.
-@SpringBootTest(properties = {"spring.aop.proxy-target-class=true"}) //CGLIB 프록시
+//@SpringBootTest(properties = {"spring.aop.proxy-target-class=true"}) //CGLIB 프록시
+@SpringBootTest
 @Import(ProxyDIAspect.class)
 public class ProxyDITest {
     @Autowired
